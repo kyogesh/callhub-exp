@@ -3,7 +3,7 @@ import django_heroku
 
 
 DEBUG = True
-ALLOWED_HOSTS = ['*', ]
+ALLOWED_HOSTS = ['callhub-experiment.herokuapp.com', ]
 INSTALLED_APPS = [
     # 'whitenoise.runserver_nostatic',
     'django.contrib.admin',

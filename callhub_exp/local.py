@@ -1,6 +1,7 @@
 from .settings import *
 
 DEBUG = True
+ALLOWED_HOSTS = ['callhub-experiment.herokuapp.com', ]
 INSTALLED_APPS += ['api',
                    'core',
                    'django_extensions',
