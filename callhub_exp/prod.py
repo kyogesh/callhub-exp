@@ -23,10 +23,10 @@ INSTALLED_APPS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6v722740qbkjl',
-        'USER': 'pitxnucxavybjg',
-        'PASSWORD': 'e8cef8c0e0e9ec29cf8c712c539f67287c32186fc366c130e2a4496f290985c1',
-        'HOST': 'ec2-174-129-32-37.compute-1.amazonaws.com',
+        'NAME': 'd52ars1jbcmjrl',
+        'USER': 'wjparajvcmoqre',
+        'PASSWORD': '2d28acfff5b1c005df0d6478c24f7d873c65b9e29f345f6b3fe15a77cad79606',
+        'HOST': 'ec2-174-129-18-98.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
