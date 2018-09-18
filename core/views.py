@@ -13,6 +13,10 @@ User = get_user_model()
 
 
 class GetToken(ObtainAuthToken):
+    """
+    post:
+    Returns 'token' and 'username' for given 'username' and 'password'
+    """
     def post(self, request, *args, **kwargs):
         response = super(GetToken, self).post(request, *args, **kwargs)
         user = User.objects.get(auth_token__key=response.data.get('token'))
@@ -21,6 +25,10 @@ class GetToken(ObtainAuthToken):
 
 
 class RegistrationView(APIView):
+    """
+    post:
+    Creates a new user instance.
+    """
 
     def post(self, request):
         serializer = UserSerializer(data=request.data)

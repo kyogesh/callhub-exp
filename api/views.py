@@ -17,6 +17,13 @@ def home(request):
 
 
 class TicketListApiView(APIView):
+    """
+    get:
+    Return a list of all the Tickets.
+
+    post:
+    Create a new Ticket instance.
+    """
     authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
@@ -43,6 +50,10 @@ class TicketListApiView(APIView):
 
 
 class TicketsWithTagApiView(APIView):
+    """
+    get:
+    Returns list of all the tickets with a given tag
+    """
 
     def get(self, request, tag):
         tag = Tag.objects.filter(tag=tag).prefetch_related('ticket')
@@ -51,6 +62,10 @@ class TicketsWithTagApiView(APIView):
 
 
 class SearchApiView(APIView):
+    """
+    post:
+    Returns search result for a 'search_text' in tag or tickets' type.
+    """
 
     def post(self, request):
         search_text = request.data['search_text']
@@ -64,11 +79,28 @@ class SearchApiView(APIView):
 
 
 class TagListCreateApiView(generics.ListCreateAPIView):
+    """
+    get:
+    Returns all Tag instances
+
+    post:
+    Creates a new Tag instance
+    """
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
 
 
 class TicketRetrieveUpdateDestroyApiView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    get:
+    Returns a Ticket instance for given 'pk'
+
+    put:
+    Update a Ticket instance for given 'pk'
+
+    delete:
+    Deletes a Ticket instance for given 'pk'
+    """
     authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
@@ -77,6 +109,10 @@ class TicketRetrieveUpdateDestroyApiView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class UserTicketsApiView(APIView):
+    """
+    get:
+    Returns all the Tickets where user is a 'reporter' or 'assignee'.
+    """
     authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
