@@ -4,13 +4,21 @@ import django_heroku
 
 DEBUG = True
 ALLOWED_HOSTS = ['*', ]
-INSTALLED_APPS += ['api',
-                   'core',
-                   'django_extensions',
-                   'django_nose',
-                   'rest_framework',
-                   'rest_framework.authtoken',
-                   ]
+INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'api',
+    'core',
+    'django_extensions',
+    'django_nose',
+    'rest_framework',
+    'rest_framework.authtoken',
+]
 
 DATABASES = {
     'default': {
