@@ -2,8 +2,8 @@ from .settings import *
 import django_heroku
 
 
-DEBUG = False
-ALLOWED_HOSTS = ['52.32.181.40', ]
+DEBUG = True
+ALLOWED_HOSTS = ['*', ]
 INSTALLED_APPS += ['api',
                    'core',
                    'django_extensions',
