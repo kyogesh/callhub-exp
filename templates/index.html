@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html ng-app="callHubExp" ng-strict-di>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CallHuub Experiment">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Angular">
+    <meta name="author" content="Yogesh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Hub Experiment</title>
+    <link href="{% static 'css/toolkit-inverse.css' %}" rel="stylesheet">
+    <link href="{% static 'css/application.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/ng-tags-input.bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/ng-tags-input.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/angular-super-gallery.min.css' %}" rel="stylesheet">
+
+    <style type="text/css">
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-bar-center" align="center">
+      <fixed-top></fixed-top>
+    </div>
+
+    <div class="container" align="center">
+      <div class="row">
+          <div ng-view class="content"></div>
+      </div><!--/row-->
+    </div><!--/.fluid-container-->
+    <contact-form></contact-form>
+    <footer></footer>
+    <script type="text/javascript" src="{% static 'js/common/jquery-3.1.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/angular.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/angular-animate.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/angular-route.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/angular-cookies.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/angular-touch.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/angular-fullscreen.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/ui-bootstrap-tpls-2.0.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common/ng-tags-input.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/callHubExp.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/callHubExp.config.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home/home.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home/home.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tickets/ticket.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tickets/ticket.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tickets/user-tickets.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tickets/report-issue.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/auth/auth.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/auth/auth.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/auth/auth.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/register/register.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/register/register.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tags/tags.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tags/tags.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tags/search.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/fixed-top/fixed-top.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/fixed-top/fixed-top.component.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/footer/footer.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/footer/footer.component.js' %}"></script>
+  </body>
+</html>

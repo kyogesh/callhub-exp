@@ -1,0 +1,73 @@
+<div class="row" align="center">
+    <div classs="row">
+        <div class="col-bg-8 about-cover" align="center">
+            <img src="/static/images/about-cover.jpg">
+        </div>
+    </div>
+    <div class="row quote">
+        <img src="/static/images/quote-mark.png" align="left" style="margin-left: 14%">
+        <div class="col-bg-10" align="center">
+            <p class="quote-para">
+                <i>One of the India's most revered and celebrated musicians. Baiju Dharmajan is a guitarist, producer, composer and
+                music director widely recognized for his unique ability of seamlessly blending overtones of Carnatic Music with Rock.</i>
+            </p>
+            <img src="/static/images/quote-mark-end.png" align="right" style="margin-right: 13.5%; margin-top: -3.5%">
+        </div>
+    </div>
+    <div class="row row-one">
+        <div class="col-md-7 short-bio" align="center">
+            <p ng-repeat="para in $ctrl.shortBio">{{para}}</p>
+        </div>
+        <div class="col-sm-5" align="right">
+            <img src="/static/images/about-image-1.jpg" style="width:90%; margin-top:50px">
+        </div>
+    </div>
+    <div class="row about" align="center" style="font-size: large">Awards and Recognitions</div>
+    <hr>
+    <div class="row row-one">
+        <div class="col-sm-4" align="right">
+            <img src="/static/images/about-image-2.jpg">
+        </div>
+        <div class="col-md-8 award-list" align="left">
+            <ul ng-repeat="award in $ctrl.awards">
+                <li>{{award}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row endorse" align="center" style="font-size: large">Endorsements</div>
+    <hr>
+    <div class="row" align="center" style="margin-left:11%">
+        <div class="col-sm-2">
+            <img src="/static/images/laney-logo.jpg" style="max-height: 80%; max-width: 80%">
+        </div>
+        <div class="col-sm-2 endorse-logo" align="center">
+            <img src="/static/images/bose-logo.jpg" style="max-height: 110%; max-width: 110%">
+        </div>
+        <div class="col-sm-2 endorse-logo">
+            <img src="/static/images/blade-logo.jpg" style="max-height: 100%; max-width: 80%">
+        </div>
+        <div class="col-sm-2 endorse-logo">
+            <img src="/static/images/daddario-logo.jpg" style="max-height: 100%; max-width: 100%">
+        </div>
+        <div class="col-sm-2 endorse-logo">
+            <img src="/static/images/digitech-logo.jpg" style="max-height: 110%; max-width: 100%">
+        </div>
+    </div>
+    <div class="row" align="center" style="margin-left:11%; margin-bottom: 25px">
+        <div class="col-sm-2">
+            <label class="sponsor-logo">Laney Amplification, UK</label>
+        </div>
+        <div class="col-sm-2">
+            <label class="sponsor-logo">Bose Corporation, US</label>
+        </div>
+        <div class="col-sm-2">
+            <label class="sponsor-logo">Blade Guitars, Switzerland</label>
+        </div>
+        <div class="col-sm-2">
+            <label class="sponsor-logo">D'Addario & Planet Waves, US</label>
+        </div>
+        <div class="col-sm-2">
+            <label class="sponsor-logo">DigiTech Guitar Effects, US</label>
+        </div>
+    </div>
+</div>

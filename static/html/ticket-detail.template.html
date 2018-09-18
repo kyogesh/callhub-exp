@@ -1,0 +1,11 @@
+<div align="left">
+    <p><strong>Title: </strong>{{$ctrl.ticket.title}}</p>
+    <p><strong>Description: </strong>{{$ctrl.ticket.description}}</p>
+    <p><strong>Reporter: </strong>{{$ctrl.ticket.reporter}}</p>
+    <p><strong>Assignee: </strong>{{$ctrl.ticket.assignee}}</p>
+    <p><strong>Type: </strong>{{$ctrl.ticket.type}}</p>
+    <p><strong>Status: </strong>{{$ctrl.ticket.status}}</p>
+    <p><strong>Created: </strong>{{$ctrl.ticket.created}}</p>
+    <p><strong>Updated: </strong>{{$ctrl.ticket.updated}}</p>
+    <p><strong>Tags: </strong> <a href="#!/tag/{{tag}}" ng-repeat="tag in $ctrl.ticket.tags">{{tag}}</a></p>
+</div>

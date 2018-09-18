@@ -1,0 +1,20 @@
+<set-title title="Login"></set-title>
+<div class="design-login">
+  <div class="login-form">
+    <form>
+      <div class="form-group">
+        <h3>Login to CallHub</h3>
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" ng-model="$ctrl.username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="$ctrl.password">
+      </div>
+      <div class="alert-danger" ng-show="$ctrl.errors" >{{ $ctrl.errors }}</div>
+      <p class="center"><button type="submit" class="btn btn-pill btn-custom" ng-click="$ctrl.login()">Login</button></p>
+    </form>
+      <p class="center"><label for="username">New to CallHub</label><a href="/#!/register"> Register</a></p>
+  </div>
+
+</div>

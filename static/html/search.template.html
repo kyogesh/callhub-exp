@@ -1,0 +1,9 @@
+<div>
+    <input type="text" placeholder="Search" ng-model="$ctrl.searchText">
+    <input type="button" ng-click="$ctrl.search($ctrl.searchText)" value="search">
+
+    <div ng-show="$ctrl.tickets == []">No Tickets</div>
+    <ul ng-repeat="ticket in $ctrl.tickets">
+        <a href="#!/ticket/{{ticket.id}}">{{ticket.title}}</a>
+    </ul>
+</div>

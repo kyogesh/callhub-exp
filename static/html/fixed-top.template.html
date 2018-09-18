@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-inner">
+    <div class="container">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li><a href="#!/">Home</a></li>
+                <li><a href="#!/my-tickets">My Issues</a></li>
+                <li><a href="#!/report-issue">Report Issue</a></li>
+                <li><a href="#!/search">Search</a></li>
+            </ul>
+            <div align="right">
+              <div class="input-with-icon" ng-show="$ctrl.user.loggedIn">
+                Logged in as {{$ctrl.user.loggedUsername}}
+                  <button class="btn btn-pill btn-custom logout" type="button" ng-click="$ctrl.logout()">Logout</button>
+              </div>
+
+              <div class="input-with-icon" ng-hide="$ctrl.user.loggedIn">
+                <a class="btn btn-pill btn-custom signup" href="/#!/register">Sign Up</a>
+              </div>
+            </div>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    </div>
+</nav>

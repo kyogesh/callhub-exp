@@ -1,0 +1,33 @@
+<set-title title="Register"></set-title>
+<div class="design-login">
+  <div class="login-form">
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" ng-model="$ctrl.username" required/>
+  <div class="alert custom_alert alert_storyboard" ng-show="$ctrl.errors.username" ><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{ $ctrl.errors.username }}</div>
+        <font style="color: red">{{ required_field }}</font>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Email" ng-model="$ctrl.email"/>
+  <div class="alert custom_alert alert_storyboard" ng-show="$ctrl.errors.email" ><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{ $ctrl.errors.email }}</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="$ctrl.password" required/>
+        <font style="color: red">{{ required_field }}</font>
+      </div>
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" class="form-control" id="first_name" placeholder="First Name" ng-model="$ctrl.first_name"/>
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input type="text" class="form-control" id="last_name" placeholder="Last Name" ng-model="$ctrl.last_name"/>
+      </div>
+      <p class="center"><button type="submit" class="btn btn-pill btn-custom" ng-click="$ctrl.register()">Sign Up</button></p>
+    </form>
+  </div>
+   Already a member? <a href="#!/login">Login</a>
+</div>
