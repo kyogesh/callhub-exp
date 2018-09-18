@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib.auth import get_user_model
 from django.contrib.auth.signals import user_logged_in
 from rest_framework.views import APIView
@@ -8,13 +7,9 @@ from rest_framework.authtoken.views import ObtainAuthToken
 
 from .serializers import UserSerializer
 
-app_label = 'api'
+app_label = 'core'
 
 User = get_user_model()
-
-
-def home(request):
-    return render(request, 'index.html')
 
 
 class GetToken(ObtainAuthToken):

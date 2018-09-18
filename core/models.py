@@ -7,6 +7,6 @@ User = get_user_model()
 
 
 @receiver(post_save, sender=User)
-def create_profile(sender, instance, created, **kwargs):
+def create_token(sender, instance, created, **kwargs):
     if created:
         Token.objects.get_or_create(user=instance)
