@@ -2,10 +2,10 @@ from .settings import *
 import django_heroku
 
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['callhub-experiment.herokuapp.com', ]
 INSTALLED_APPS = [
-    # 'whitenoise.runserver_nostatic',
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -32,7 +32,7 @@ DATABASES = {
 }
 
 
-# MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware', ]
+MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware', ]
 
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
@@ -45,4 +45,4 @@ NOSE_ARGS = [
 
 
 django_heroku.settings(locals())
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
