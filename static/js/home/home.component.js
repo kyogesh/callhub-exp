@@ -9,6 +9,9 @@
                 $http.get('tickets/').then(function successCallback(response) {
                     self.tickets = response.data;
                 })
+                this.selectTicket = function (ticket) {
+                    self.selectedTicket = ticket;
+                 };
 
             }]
         });

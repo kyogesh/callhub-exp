@@ -1,8 +1,19 @@
-<div align="center">
+<div align="left" class="col-md-4">
 
     <div ng-hide="$ctrl.tickets">No Tickets</div>
     <ul ng-repeat="ticket in $ctrl.tickets">
-        <a href="#!/ticket/{{ticket.id}}">{{ticket.title}}</a>
+        <a href="" ng-click="$ctrl.selectTicket(ticket)">{{ticket.title}}</a>
     </ul>
 </div>
-<hr>
+
+<div ng-show="$ctrl.selectedTicket" class="col-md-6">
+    <p><strong>Title: </strong>{{$ctrl.selectedTicket.title}}</p>
+    <p><strong>Description: </strong>{{$ctrl.selectedTicket.description}}</p>
+    <p><strong>Reporter: </strong>{{$ctrl.selectedTicket.reporter}}</p>
+    <p><strong>Assignee: </strong>{{$ctrl.selectedTicket.assignee}}</p>
+    <p><strong>Type: </strong>{{$ctrl.selectedTicket.type}}</p>
+    <p><strong>Status: </strong>{{$ctrl.selectedTicket.status}}</p>
+    <p><strong>Created: </strong>{{$ctrl.selectedTicket.created}}</p>
+    <p><strong>Updated: </strong>{{$ctrl.selectedTicket.updated}}</p>
+    <p><strong>Tags: </strong> <a href="#!/tag/{{tag}}" ng-repeat="tag in $ctrl.selectedTicket.tags">{{tag}}</a></p>
+</div>
